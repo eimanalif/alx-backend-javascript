@@ -1,5 +1,12 @@
-/* HOLBERTON course data */
+/**
+ * HOLBERTON course data
+ * attributes name ,length , students number
+ */
 export default class HolbertonCourse {
+  /**
+  * new class
+  * name, length , students are param
+  */
   constructor(name, length, students) {
     this.name = name;
     this.length = length;
@@ -7,7 +14,7 @@ export default class HolbertonCourse {
   }
 
   get name() {
-    return this.name;
+    return this._name;
   }
 
   set name(value) {
@@ -36,7 +43,7 @@ export default class HolbertonCourse {
     if (!(value instanceof Array)) {
       throw new TypeError('students must be an array of strings');
     }
-        if (!value.every((student) => typeof student === 'string')) {
+    if (!value.every((student) => typeof student === 'string')) {
       throw new TypeError('Students must be an array of strings');
     }
     this._students = value;
