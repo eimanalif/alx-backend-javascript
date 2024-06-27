@@ -1,8 +1,8 @@
 export default class Car {
-  constractor(brand, color, motor) {
+  constractor(brand, motor, color) {
     this.brand = brand;
-    this.color = color;
     this.motor = motor;
+    this.color = color;
   }
 
   get brand() {
