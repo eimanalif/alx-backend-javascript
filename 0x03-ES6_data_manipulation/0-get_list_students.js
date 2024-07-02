@@ -1,4 +1,4 @@
- /**
+/**
   * a function that eturns an array of objects.
   */
 export default function getListStudents() {
