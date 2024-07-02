@@ -1,8 +1,12 @@
-// a function that sums the students id
-
+/**
+ * a function that sums the students id
+ */
 export default function getStudentIdsSum(students) {
   if (students instanceof Array) {
-    return students.reduce((sum, student) => sum + student.id, 0);
+    return students.reduce(
+      (prevStudent, curStudent) => prevStudent.id || prevStudent + curStudent.id,
+      0,
+    );
   }
   return 0;
 }
