@@ -3,17 +3,17 @@
  * that start with a specific string (startString).
  */
 export default function cleanSet(set, startString) {
-  if (!startString || typeof startString !== 'string') {
+  if (typeof startString !== 'string' || startString === '') {
     return '';
   }
 
   const result = [];
 
-  set.forEach((value) => {
+  for (const value of set) {
     if (typeof value === 'string' && value.startsWith(startString)) {
       result.push(value.slice(startString.length));
     }
-  });
+  }
 
   return result.join('-');
 }
