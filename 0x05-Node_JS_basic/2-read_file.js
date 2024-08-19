@@ -1,3 +1,4 @@
+//task 02
 const fs = require('fs');
 
 /** function to count student */
