@@ -35,4 +35,10 @@ module.exports = {
       }
     ]
   };
-  
+
+  module.exports = {
+    env: {
+      node: true, // Add this line to enable Node.js global variables
+    },
+    // other configurations
+  };

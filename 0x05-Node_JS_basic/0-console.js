@@ -1,7 +1,10 @@
-// print in STDOUT using console.log
+/**
+ * Displays a message on the STDOUT.
+ * @param {String} msg The message to display.
+ */
+const displayMessage = (msg) => {
+  console.log(msg);
+};
 
-const displayMessage = (text) => {
-    console.log(text);
-  };
-  
-  module.exports = displayMessage;
+// eslint-disable-next-line
+module.exports = displayMessage;
