@@ -1,4 +1,3 @@
-/* eslint-disable */
 const fs = require('fs');
 
 function countStudents(filePath) {
@@ -46,4 +45,3 @@ function countStudents(filePath) {
 }
 
 module.exports = countStudents;
-/* eslint-enable */

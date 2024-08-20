@@ -1,4 +1,3 @@
-//eslint-disable
 const express = require('express');
 const fs = require('fs');
 
@@ -9,7 +8,6 @@ const DB_FILE = process.argv.length > 2 ? process.argv[2] : '';
 /**
  * Counts the students in a CSV data file.
  * @param {String} dataPath The path to the CSV data file.
- * @author Bezaleel Olakunori <https://github.com/B3zaleel>
  */
 const countStudents = (dataPath) => new Promise((resolve, reject) => {
   if (!dataPath) {
@@ -95,4 +93,3 @@ app.listen(PORT, () => {
 });
 
 module.exports = app;
-// eslint-enable

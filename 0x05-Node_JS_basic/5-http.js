@@ -1,4 +1,3 @@
-/* eslint-disable */
 const http = require('http');
 const fs = require('fs');
 
@@ -117,4 +116,3 @@ app.listen(PORT, HOST, () => {
 });
 
 module.exports = app;
-/* eslint-enable */
