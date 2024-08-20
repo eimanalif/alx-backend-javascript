@@ -7,4 +7,5 @@ const displayMessage = (msg) => {
   console.log(msg);
 };
 
+// eslint-disable-next-line
 module.exports = displayMessage;
