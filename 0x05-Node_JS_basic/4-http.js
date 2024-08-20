@@ -1,3 +1,4 @@
+// eslint-disable-next-line
 const http = require('http');
 
 const hostname = '127.0.0.1';
@@ -10,4 +11,5 @@ const app = http.createServer((req, res) => {
 });
 
 app.listen(port, hostname);
+// eslint-disable-next-line
 module.exports = app;
