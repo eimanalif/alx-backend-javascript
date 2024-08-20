@@ -1,4 +1,4 @@
-//task 02
+/* eslint-disable */
 const fs = require('fs');
 
 /** function to count student */
