@@ -46,3 +46,4 @@ function countStudents(filePath) {
 }
 
 module.exports = countStudents;
+/* eslint-enable */
