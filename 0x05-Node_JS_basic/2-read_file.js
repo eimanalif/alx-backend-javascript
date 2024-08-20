@@ -37,4 +37,5 @@ function countStudents(filePath) {
   }
 }
 
+// eslint-disable-next-line
 module.exports = countStudents;
