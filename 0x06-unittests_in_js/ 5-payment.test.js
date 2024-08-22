@@ -1,13 +1,13 @@
-import { spy } from 'sinon';
-import { expect } from 'chai';
-import sendPaymentRequestToAPI from './5-payment'; // Adjust this path based on your project structure
+const sinon = require('sinon');
+const { expect } = require('chai');
+const sendPaymentRequestToAPI = require('./5-payment'); // Adjust this path based on your project structure
 
 describe('sendPaymentRequestToAPI', function () {
     let consoleSpy;
 
     beforeEach(function () {
         // Create a spy on console.log
-        consoleSpy = spy(console, 'log');
+        consoleSpy = sinon.spy(console, 'log');
     });
 
     afterEach(function () {
