@@ -1,37 +1,29 @@
 const sinon = require('sinon');
 const { expect } = require('chai');
-const sendPaymentRequestToAPI = require('./5-payment'); // Adjust this path based on your project structure
+const sendPaymentRequestToApi = require('./5-payment');
 
-describe('sendPaymentRequestToAPI', function () {
-    let consoleSpy;
+describe('sendPaymentRequestToApi', () => {
+  let bigBrother;
 
-    beforeEach(function () {
-        // Create a spy on console.log
-        consoleSpy = sinon.spy(console, 'log');
-    });
+  beforeEach(() => {
+    if (!bigBrother) {
+      bigBrother = sinon.spy(console);
+    }
+  });
 
-    afterEach(function () {
-        // Restore the original console.log
-        consoleSpy.restore();
-    });
+  afterEach(() => {
+    bigBrother.log.resetHistory();
+  });
 
-    it('should log "The total is: 120" and only be called once when called with 100 and 20', function () {
-        sendPaymentRequestToAPI(100, 20);
+  it('sendPaymentRequestToApi(100, 20) logs "The total is: 120" to the console', () => {
+    sendPaymentRequestToApi(100, 20);
+    expect(bigBrother.log.calledWith('The total is: 120')).to.be.true;
+    expect(bigBrother.log.calledOnce).to.be.true;
+  });
 
-        // Check that console.log was called with the correct string
-        expect(consoleSpy.calledWith('The total is: 120')).to.be.true;
-
-        // Check that console.log was called only once
-        expect(consoleSpy.calledOnce).to.be.true;
-    });
-
-    it('should log "The total is: 20" and only be called once when called with 10 and 10', function () {
-        sendPaymentRequestToAPI(10, 10);
-
-        // Check that console.log was called with the correct string
-        expect(consoleSpy.calledWith('The total is: 20')).to.be.true;
-
-        // Check that console.log was called only once
-        expect(consoleSpy.calledOnce).to.be.true;
-    });
+  it('sendPaymentRequestToApi(10, 10) logs "The total is: 20" to the console', () => {
+    sendPaymentRequestToApi(10, 10);
+    expect(bigBrother.log.calledWith('The total is: 20')).to.be.true;
+    expect(bigBrother.log.calledOnce).to.be.true;
+  });
 });
